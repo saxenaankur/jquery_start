@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+    <style>
+  div { color:blue; }
+  span { color:red; }
+</style>
+    <script src="jquery-latest.js"></script>
+</head>
+<body>
+
+<div id="myDIV"></div>
+
+<script>
+$(document).ready(function() {
+ var testArray = ["test1","test2","test3","test4"];
+    var vPool="";
+    $.each(testArray, function(i, val) {
+      vPool+=val + "<br />";
+    });
+    $('#myDIV').html(vPool);
+    //vPool="";
+});
+</script> 
+ 
+</body>
+</html>
