@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+  <style>
+  a { color:red; margin:4px; }
+  b { color:blue; }
+  </style>
+  <script src="jquery-latest.js"></script>
+  <script src="jquery.js"></script>
+</head>
+<body>
+
+<h1>Registration Form:</h1>
+
+<form id="form1">
+  
+<div>First Name<input type="text" name="fname" id="fname"><span></span></div>
+<div>Last Name<input type="text" name="lname" id="lname"><span></span></div>
+<div><input type="submit" value="submit" ></div>
+  
+</form>
+<p></p>
+<script>
+
+$(document).ready(function(){
+var arr=[];  
+  $("#form1").submit(function(){
+		var $spans = $("span");
+		
+		if ($('#fname').val()=="") {	
+			arr.push("<a>Please enter your Firstname</a>");
+			
+		}	
+			//$spans.eq(0).html("<a>Please enter your Firstname</a>");
+			//$spans.eq(0).html( $('#fname').val() == "" ? "<a>Please enter your Firstname</a>" : "");	
+		if ($('#lname').val()==""){
+			arr.push("<a>Please enter your Lastname</a>");
+			
+		}
+		//$spans.eq(1).html("<a>Please enter your Lastname</a>");
+		//$spans.eq(1).html( $('#lname').val() == "" ? "<a>Please enter your Lastname</a>" : "");
+		
+		
+			
+		//return false;
+		
+	
+	});
+	if(arr.length==0)
+	{
+		$("p").html("<b>lenth is  zero here!!!!</b>");
+		
+	}
+	
+});
+
+
+/*
+$(document).ready(function(){
+
+$("div").append("<div>Please enter your Firstname</div>");
+$("div").hover(function() {
+$(this).find("div").animate({opacity: "show", top: "15"}, "slow");
+}, function() {
+$(this).find("div").animate({opacity: "hide", top: "15"}, "fast");
+});
+*/
+
+</script>
+
+</body>
+</html>
